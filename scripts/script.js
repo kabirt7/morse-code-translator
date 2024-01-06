@@ -1,4 +1,4 @@
-import { translate } from "./modules/morse-code.js";
+import { translate } from "./modules/translator-logic.js";
 
 // dom utils
 // select options
