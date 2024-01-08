@@ -5,7 +5,15 @@ body {
 }
 
 .title {
-  background-color: lightcyan;
+  background: rgba(
+    178,
+    255,
+    251,
+    0.3
+  ); /* Adjust the opacity for the glassy effect */
+  box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1); /* Shadow for the glassy effect */
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
   color: black;
   width: 30vw;
   height: 10vh;
@@ -20,7 +28,16 @@ body {
   align-items: center;
   height: 72vh;
   width: 85vw;
-  background-color: lightcyan;
+  background: rgba(
+    105,
+    255,
+    248,
+    0.3
+  ); /* Adjust the opacity for the glassy effect */
+  box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1); /* Shadow for the glassy effect */
+  backdrop-filter: blur(10px);
+
+  border-radius: 10px;
 
   &__header {
     height: 10%;
@@ -43,5 +60,19 @@ body {
       height: 38%;
       width: 80%;
     }
+  }
+}
+
+.arrow {
+  width: 0;
+  height: 0;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-right: 40px solid #000; /* Adjust the color as needed */
+  cursor: pointer;
+  transition: transform 0.3s ease; /* Add smooth transition effect */
+
+  &__rotated {
+    transform: rotate(180deg);
   }
 }
