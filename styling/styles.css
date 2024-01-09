@@ -5,7 +5,12 @@ body {
 }
 
 .title {
-  background: rgba(178, 255, 251, 0.3); /* Adjust the opacity for the glassy effect */
+  background: rgba(
+    178,
+    255,
+    251,
+    0.3
+  ); /* Adjust the opacity for the glassy effect */
   box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1); /* Shadow for the glassy effect */
   backdrop-filter: blur(10px);
   border-radius: 10px;
@@ -23,7 +28,12 @@ body {
   align-items: center;
   height: 72vh;
   width: 85vw;
-  background: rgba(105, 255, 248, 0.3); /* Adjust the opacity for the glassy effect */
+  background: rgba(
+    105,
+    255,
+    248,
+    0.3
+  ); /* Adjust the opacity for the glassy effect */
   box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1); /* Shadow for the glassy effect */
   backdrop-filter: blur(10px);
   border-radius: 10px;
@@ -60,4 +70,19 @@ body {
 }
 .arrow__rotated {
   transform: rotate(180deg);
+}
+
+footer {
+  display: flex;
+}
+
+button {
+  height: 100px;
+  width: 200px;
+}
+
+.box {
+  width: 300px;
+  height: 100px;
+  background-color: black;
 }

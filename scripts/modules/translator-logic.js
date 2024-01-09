@@ -1,4 +1,5 @@
 import * as dom from "./dom-utils.js";
+import { lightLogic } from "./light-logic.js";
 
 const morseCode = {
   " ": "/",
@@ -90,6 +91,7 @@ export const translate = (value, utils = dom) => {
       console.log(x);
     }
     console.log("reached morse to latin");
+
     return (translation = newArr.flat().join(""));
   } else {
     console.log("reached else");

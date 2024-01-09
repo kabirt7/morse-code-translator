@@ -2,6 +2,7 @@ import { translate } from "./modules/translator-logic.js";
 import { rotateArrow } from "./modules/arrow-logic.js";
 import { switchText } from "./modules/select-logic.js";
 import * as dom from "./modules/dom-utils.js";
+import { lightLogic } from "./modules/light-logic.js";
 
 console.log(dom.arrow);
 
@@ -25,6 +26,7 @@ dom.textInput.addEventListener("keydown", (event) => {
     // console.log(dom.textInput.value);
     let str = translate(dom.textInput.value);
     console.log(str);
+    lightLogic(str);
     dom.textOutput.value = str;
   }, 1);
 });

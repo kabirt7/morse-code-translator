@@ -7,3 +7,6 @@ export const arrow = document.querySelector(".arrow");
 // text
 export const textInput = document.querySelector("#mainInput");
 export const textOutput = document.querySelector("#mainOutput");
+
+// footer
+export const box = document.querySelector(".box");
