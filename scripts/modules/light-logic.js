@@ -7,19 +7,19 @@ export const lightLogic = async (value) => {
   for (const char of value) {
     if (char === "-") {
       dom.box.style.backgroundColor = "white";
-      await delay(200);
+      await delay(175);
       dom.box.style.backgroundColor = "black";
-      await delay(200);
+      await delay(175);
       console.log("-");
     } else if (char === ".") {
       dom.box.style.backgroundColor = "white";
-      await delay(100);
+      await delay(105);
       dom.box.style.backgroundColor = "black";
-      await delay(100);
+      await delay(105);
       console.log(".");
     } else if (char === " ") {
       dom.box.style.backgroundColor = "black";
-      await delay(200);
+      await delay(300);
       console.log("break");
     }
   }
