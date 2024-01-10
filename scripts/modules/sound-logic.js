@@ -1,3 +1,5 @@
+// import * as dom from "./dom-utils.js";
+
 const mySoundDah = new Audio("../../src/sounds/dah.wav");
 const mySoundDit = new Audio("../../src/sounds/dit.wav");
 

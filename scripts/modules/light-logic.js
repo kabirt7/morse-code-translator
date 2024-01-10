@@ -1,4 +1,5 @@
 import * as dom from "./dom-utils.js";
+import { sharedState } from "./dom-utils.js";
 
 const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 

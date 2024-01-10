@@ -7,32 +7,46 @@ import { soundLogic } from "./modules/sound-logic.js";
 
 console.log(dom.arrow);
 
-// dom utils
-// select options
-// const selectInput = document.querySelector("#selectInput");
-// const selectOutput = document.querySelector("#selectOutput");
-// const arrow = document.querySelector(".arrow");
-
-// // text
-// const textInput = document.querySelector("#mainInput");
-// const textOutput = document.querySelector("#mainOutput");
-
 dom.arrow.addEventListener("click", (event) => {
   switchText();
   rotateArrow();
+  // dom.stopFlag = false;
 });
+
+let inputStr = "";
 
 dom.textInput.addEventListener("keydown", (event) => {
   setTimeout(() => {
     // console.log(dom.textInput.value);
-    let str = translate(dom.textInput.value);
-    console.log(str);
-    lightLogic(str);
-    soundLogic(str);
-    dom.textOutput.value = str;
+    inputStr = translate(dom.textInput.value);
+    // console.log(str);
+    // lightLogic(str);
+    // soundLogic(str);
+    dom.textOutput.value = inputStr;
   }, 1);
 });
 
-// const updateTextOutput = (value) => {
-//   dom.textOutput.textContent = value;
-// };
+dom.lightButton.addEventListener("click", () =>
+  dom.lightButton.toggleAttribute("selected")
+);
+
+dom.soundButton.addEventListener("click", () =>
+  dom.soundButton.toggleAttribute("selected")
+);
+
+dom.playButton.addEventListener("click", (event) => {
+  if (
+    dom.lightButton.hasAttribute("selected") &
+    dom.soundButton.hasAttribute("selected")
+  ) {
+    soundLogic(inputStr);
+    lightLogic(inputStr);
+    console.log("l and s");
+  } else if (dom.lightButton.hasAttribute("selected")) {
+    lightLogic(inputStr);
+    console.log("light");
+  } else if (dom.soundButton.hasAttribute("selected")) {
+    soundLogic(inputStr);
+    console.log("sound");
+  }
+});
