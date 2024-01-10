@@ -20,5 +20,5 @@ export const box = document.querySelector(".box");
 
 // footer functionality
 export const sharedState = {
-  flag: false,
+  stopFlag: false,
 };
