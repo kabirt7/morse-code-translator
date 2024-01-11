@@ -17,11 +17,11 @@
           id="selectInput"
           name="Input-Select"
         >
-          <option class="translator__select__option" value="morse">
-            Morse Code
-          </option>
           <option class="translator__select__option" value="latin">
             English (Latin alphabet)
+          </option>
+          <option class="translator__select__option" value="morse">
+            Morse Code
           </option>
         </select>
         <div class="arrow"></div>
@@ -30,11 +30,11 @@
           id="selectOutput"
           name="Output-Select"
         >
-          <option class="translator__select__option" value="latin">
-            English (Latin alphabet)
-          </option>
           <option class="translator__select__option" value="morse">
             Morse Code
+          </option>
+          <option class="translator__select__option" value="latin">
+            English (Latin alphabet)
           </option>
         </select>
       </header>
@@ -48,13 +48,12 @@
       </main>
       <footer class="footer">
         <section class="footer__input">
-          <button id="lightButton"></button>
-          <button id="soundButton"></button>
-          <input type="range" id="morseSpeed" />
+          <button id="lightButton">Light</button>
+          <button id="soundButton">Sound</button>
         </section>
         <section class="footer__buttons">
-          <button id="stopButton"></button>
-          <button id="playButton"></button>
+          <button id="stopButton"><div class="footer__square"></div></button>
+          <button id="playButton"><div class="footer__triangle"></div></button>
         </section>
         <section class="footer__light-output">
           <div class="box"></div>

@@ -4,6 +4,7 @@ import { switchText } from "./modules/select-logic.js";
 import * as dom from "./modules/dom-utils.js";
 import { lightLogic } from "./modules/light-logic.js";
 import { soundLogic } from "./modules/sound-logic.js";
+import { lightAndSoundLogic } from "./modules/light-and-sound-logic.js";
 
 dom.arrow.addEventListener("click", (event) => {
   switchText();
@@ -19,14 +20,17 @@ dom.textInput.addEventListener("keydown", (event) => {
   }, 1);
 });
 
-dom.lightButton.addEventListener("click", () => {
-  dom.lightButton.toggleAttribute("selected");
-  console.log(dom.sharedState.flag);
+dom.lightButton.addEventListener("click", (e) => {
+  e.target.toggleAttribute("selected");
+
+  e.target.classList.toggle("footer--selected-light");
 });
 
-dom.soundButton.addEventListener("click", () =>
-  dom.soundButton.toggleAttribute("selected")
-);
+dom.soundButton.addEventListener("click", (e) => {
+  e.target.toggleAttribute("selected");
+
+  e.target.classList.toggle("footer--selected-sound");
+});
 
 dom.playButton.addEventListener("click", (event) => {
   dom.sharedState.stopFlag = false;
@@ -34,8 +38,7 @@ dom.playButton.addEventListener("click", (event) => {
     dom.lightButton.hasAttribute("selected") &
     dom.soundButton.hasAttribute("selected")
   ) {
-    soundLogic(inputStr);
-    lightLogic(inputStr);
+    lightAndSoundLogic(inputStr);
     console.log("l and s");
   } else if (dom.lightButton.hasAttribute("selected")) {
     lightLogic(inputStr);

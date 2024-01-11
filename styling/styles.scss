@@ -1,25 +1,24 @@
+@font-face {
+  font-family: "AutumnPixel";
+  src: url("../src/AutumnPixelExtraWideRegular-6YPlv.ttf") format("truetype");
+}
+
 body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100vh;
+  justify-content: flex-start;
 }
 
 .title {
-  background: rgba(
-    178,
-    255,
-    251,
-    0.3
-  ); /* Adjust the opacity for the glassy effect */
-  box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1); /* Shadow for the glassy effect */
   backdrop-filter: blur(10px);
-  border-radius: 10px;
   color: black;
-  width: 30vw;
-  height: 10vh;
+  padding: 3vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: "AutumnPixel", sans-serif;
 }
 
 .translator {
@@ -28,37 +27,42 @@ body {
   align-items: center;
   height: 72vh;
   width: 85vw;
-  background: rgba(
-    105,
-    255,
-    248,
-    0.3
-  ); /* Adjust the opacity for the glassy effect */
-  box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1); /* Shadow for the glassy effect */
-  backdrop-filter: blur(10px);
-
+  border: 2px black solid;
+  background-color: rgba(190, 190, 190, 1);
   border-radius: 10px;
 
   &__header {
-    height: 10%;
+    height: 15vh;
     width: 70%;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+
+    select {
+      padding: 10px;
+      border: 2px solid black;
+      background-color: rgb(76, 76, 76);
+      color: white;
+      font-size: 16px;
+      outline: none;
+      transition: border-color 0.3s;
+    }
   }
 
   &__main {
     width: 100%;
-    height: 70%;
+    height: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    gap: 50px;
+    gap: 20px;
 
     &__text {
-      height: 38%;
+      padding: 10px;
+      height: 45%;
       width: 80%;
+      border-radius: 10px;
     }
   }
 }
@@ -68,9 +72,9 @@ body {
   height: 0;
   border-top: 15px solid transparent;
   border-bottom: 15px solid transparent;
-  border-right: 40px solid #000; /* Adjust the color as needed */
+  border-left: 40px solid #000;
   cursor: pointer;
-  transition: transform 0.3s ease; /* Add smooth transition effect */
+  transition: transform 0.3s ease;
 
   &__rotated {
     transform: rotate(180deg);
@@ -78,8 +82,8 @@ body {
 }
 
 .box {
-  width: 300px;
-  height: 100px;
+  width: 100%;
+  height: 100%;
   background-color: #000;
 }
 
@@ -92,14 +96,65 @@ button {
   width: 80%;
   display: flex;
   justify-content: space-between;
+  margin: 0;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  &--selected-sound {
+    background-color: greenyellow;
+  }
+
+  &--selected-light {
+    background-color: yellow;
+  }
 
   &__input {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+
+    gap: 20px;
+
+    button {
+      width: 30vw;
+      height: 10vh;
+    }
+  }
+
+  &__triangle {
+    border-top: 11px solid transparent;
+    border-bottom: 11px solid transparent;
+    border-left: 19px solid #000;
+    margin-left: 5px;
+  }
+
+  &__square {
+    width: 2.5vh;
+    height: 2.5vh;
+    background-color: black;
   }
 
   &__buttons {
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
+    gap: 20px;
+
+    button {
+      width: 8vh;
+      height: 8vh;
+      background-color: red;
+      border-radius: 50%;
+    }
   }
+
+  &__light-output {
+    width: 40%;
+  }
+}
+
+#stopButton,
+#playButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
