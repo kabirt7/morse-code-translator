@@ -10,15 +10,15 @@ export const lightLogic = async (value) => {
     } else {
       if (char === "-") {
         dom.box.style.backgroundColor = "white";
-        await delay(340);
+        await delay(200);
         dom.box.style.backgroundColor = "black";
-        await delay(170);
+        await delay(100);
         console.log("-");
       } else if (char === ".") {
         dom.box.style.backgroundColor = "white";
-        await delay(260);
+        await delay(125);
         dom.box.style.backgroundColor = "black";
-        await delay(130);
+        await delay(62.5);
         console.log(".");
       } else if (char === " ") {
         dom.box.style.backgroundColor = "black";
