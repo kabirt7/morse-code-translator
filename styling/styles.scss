@@ -1,3 +1,4 @@
+@use "./mixin";
 @font-face {
   font-family: "AutumnPixel";
   src: url("../src/AutumnPixelExtraWideRegular-6YPlv.ttf") format("truetype");
@@ -9,6 +10,10 @@ body {
   align-items: center;
   height: 100vh;
   justify-content: flex-start;
+
+  @include mixin.phone {
+    gap: 30px;
+  }
 }
 
 .title {
@@ -19,6 +24,14 @@ body {
   justify-content: center;
   align-items: center;
   font-family: "AutumnPixel", sans-serif;
+
+  @include mixin.phone {
+    font-size: small;
+  }
+
+  @include mixin.computer {
+    font-size: 4em;
+  }
 }
 
 .translator {
@@ -39,6 +52,7 @@ body {
     justify-content: space-evenly;
 
     select {
+      width: 30%;
       padding: 10px;
       border: 2px solid black;
       background-color: rgb(76, 76, 76);
@@ -46,6 +60,22 @@ body {
       font-size: 16px;
       outline: none;
       transition: border-color 0.3s;
+
+      @include mixin.phone {
+        height: 30px;
+        width: 40%;
+        font-size: 1em;
+
+        padding: 0;
+      }
+
+      @include mixin.computer {
+        width: 30%;
+        height: 40%;
+        padding: 0;
+        padding-left: 20px;
+        font-size: 1.5em;
+      }
     }
   }
 
@@ -76,6 +106,18 @@ body {
   cursor: pointer;
   transition: transform 0.3s ease;
 
+  @include mixin.phone {
+    border-top: 12.5px solid transparent;
+    border-bottom: 12.5px solid transparent;
+    border-left: 32.5px solid #000;
+  }
+
+  @include mixin.computer {
+    border-top: 2.5vh solid transparent;
+    border-bottom: 2.5vh solid transparent;
+    border-left: 6.5vh solid #000;
+  }
+
   &__rotated {
     transform: rotate(180deg);
   }
@@ -98,7 +140,7 @@ button {
   justify-content: space-between;
   margin: 0;
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 5vh;
 
   &--selected-sound {
     background-color: greenyellow;
@@ -117,13 +159,18 @@ button {
     button {
       width: 30vw;
       height: 10vh;
+      font-size: larger;
+
+      @include mixin.computer {
+        font-size: 3.5em;
+      }
     }
   }
 
   &__triangle {
-    border-top: 11px solid transparent;
-    border-bottom: 11px solid transparent;
-    border-left: 19px solid #000;
+    border-top: 2vh solid transparent;
+    border-bottom: 2vh solid transparent;
+    border-left: 3.45vh solid #000;
     margin-left: 5px;
   }
 

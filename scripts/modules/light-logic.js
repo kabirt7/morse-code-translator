@@ -10,7 +10,7 @@ export const lightLogic = async (value) => {
     } else {
       if (char === "-") {
         dom.box.style.backgroundColor = "white";
-        await delay(340);
+        await delay(500);
         dom.box.style.backgroundColor = "black";
         await delay(170);
         console.log("-");
