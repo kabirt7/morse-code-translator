@@ -1,0 +1,11 @@
+{
+  "main": "translator-logic.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.7",
+    "@babel/preset-env": "^7.23.7",
+    "babel-jest": "^29.7.0"
+  }
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Morse Code Translator</title>
+    <link rel="stylesheet" href="./styling/styles.css" />
+    <script src="./scripts/script.js" type="module"></script>
+  </head>
+  <body>
+    <h1 class="title">Morse Code Translator</h1>
+    <div class="translator">
+      <header class="translator__header">
+        <select
+          class="translator__header__select"
+          id="selectInput"
+          name="Input-Select"
+        >
+          <option class="translator__select__option" value="latin">
+            English (Latin alphabet)
+          </option>
+          <option class="translator__select__option" value="morse">
+            Morse Code
+          </option>
+        </select>
+        <div class="arrow"></div>
+        <select
+          class="translator__select"
+          id="selectOutput"
+          name="Output-Select"
+        >
+          <option class="translator__select__option" value="morse">
+            Morse Code
+          </option>
+          <option class="translator__select__option" value="latin">
+            English (Latin alphabet)
+          </option>
+        </select>
+      </header>
+      <main class="translator__main">
+        <textarea class="translator__main__text" id="mainInput"></textarea>
+        <textarea
+          class="translator__main__text"
+          id="mainOutput"
+          readonly
+        ></textarea>
+      </main>
+      <footer class="footer">
+        <section class="footer__input">
+          <button id="lightButton">Light</button>
+          <button id="soundButton">Sound</button>
+        </section>
+        <section class="footer__buttons">
+          <button id="stopButton"><div class="footer__square"></div></button>
+          <button id="playButton"><div class="footer__triangle"></div></button>
+        </section>
+        <section class="footer__light-output">
+          <div class="box"></div>
+        </section>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,160 @@
+@font-face {
+  font-family: "AutumnPixel";
+  src: url("../src/AutumnPixelExtraWideRegular-6YPlv.ttf") format("truetype");
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  justify-content: flex-start;
+}
+
+.title {
+  backdrop-filter: blur(10px);
+  color: black;
+  padding: 3vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "AutumnPixel", sans-serif;
+}
+
+.translator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 72vh;
+  width: 85vw;
+  border: 2px black solid;
+  background-color: rgba(190, 190, 190, 1);
+  border-radius: 10px;
+
+  &__header {
+    height: 15vh;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    select {
+      padding: 10px;
+      border: 2px solid black;
+      background-color: rgb(76, 76, 76);
+      color: white;
+      font-size: 16px;
+      outline: none;
+      transition: border-color 0.3s;
+    }
+  }
+
+  &__main {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+
+    &__text {
+      padding: 10px;
+      height: 45%;
+      width: 80%;
+      border-radius: 10px;
+    }
+  }
+}
+
+.arrow {
+  width: 0;
+  height: 0;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 40px solid #000;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+
+  &__rotated {
+    transform: rotate(180deg);
+  }
+}
+
+.box {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+}
+
+button {
+  width: 100px;
+  height: 100px;
+}
+
+.footer {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  &--selected-sound {
+    background-color: greenyellow;
+  }
+
+  &--selected-light {
+    background-color: yellow;
+  }
+
+  &__input {
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+
+    button {
+      width: 30vw;
+      height: 10vh;
+    }
+  }
+
+  &__triangle {
+    border-top: 11px solid transparent;
+    border-bottom: 11px solid transparent;
+    border-left: 19px solid #000;
+    margin-left: 5px;
+  }
+
+  &__square {
+    width: 2.5vh;
+    height: 2.5vh;
+    background-color: black;
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 20px;
+
+    button {
+      width: 8vh;
+      height: 8vh;
+      background-color: red;
+      border-radius: 50%;
+    }
+  }
+
+  &__light-output {
+    width: 40%;
+  }
+}
+
+#stopButton,
+#playButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
