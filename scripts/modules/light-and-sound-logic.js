@@ -32,7 +32,10 @@ export const lightAndSoundLogic = async (value) => {
         await delay(50);
       } else if (char === " ") {
         dom.box.style.backgroundColor = "black";
-        await delay(200);
+        await delay(250);
+      } else if (char === "/") {
+        dom.box.style.backgroundColor = "black";
+        await delay(400);
       }
     }
   }
