@@ -20,19 +20,19 @@ export const lightAndSoundLogic = async (value) => {
     } else {
       if (char === "-") {
         dom.box.style.backgroundColor = "white";
-        await delay(250);
+        await delay(300);
         dom.box.style.backgroundColor = "black";
         await playPromise(mySoundDah);
-        await delay(85);
+        await delay(50);
       } else if (char === ".") {
         dom.box.style.backgroundColor = "white";
-        await delay(130);
+        await delay(100);
         dom.box.style.backgroundColor = "black";
         await playPromise(mySoundDit);
-        await delay(65);
+        await delay(50);
       } else if (char === " ") {
         dom.box.style.backgroundColor = "black";
-        await delay(100);
+        await delay(200);
       }
     }
   }

@@ -23,7 +23,9 @@ export const soundLogic = async (str) => {
         await playPromise(mySoundDit);
         console.log("mySoundDit.play()");
       } else if (x === " ") {
-        await delay(200);
+        await delay(150);
+      } else if (x === "/") {
+        await delay(300);
       }
     }
   }

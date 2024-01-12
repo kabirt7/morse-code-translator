@@ -12,7 +12,7 @@ body {
   justify-content: flex-start;
 
   @include mixin.phone {
-    gap: 30px;
+    justify-content: center;
   }
 }
 
@@ -27,6 +27,8 @@ body {
 
   @include mixin.phone {
     font-size: small;
+    position: absolute;
+    top: 3vh;
   }
 
   @include mixin.computer {
@@ -164,6 +166,10 @@ button {
       @include mixin.computer {
         font-size: 3.5em;
       }
+
+      @include mixin.phone {
+        width: 25vw;
+      }
     }
   }
 
@@ -191,6 +197,15 @@ button {
       height: 8vh;
       background-color: red;
       border-radius: 50%;
+
+      @include mixin.phone {
+        width: 6vh;
+        height: 6vh;
+      }
+      @include mixin.tablet {
+        width: 7vh;
+        height: 7vh;
+      }
     }
   }
 

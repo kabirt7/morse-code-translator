@@ -11,7 +11,7 @@ body {
 }
 @media only screen and (max-width: 750px) {
   body {
-    gap: 30px;
+    justify-content: center;
   }
 }
 
@@ -27,6 +27,8 @@ body {
 @media only screen and (max-width: 750px) {
   .title {
     font-size: small;
+    position: absolute;
+    top: 3vh;
   }
 }
 @media only screen and (min-width: 1600px) {
@@ -162,6 +164,11 @@ button {
     font-size: 3.5em;
   }
 }
+@media only screen and (max-width: 750px) {
+  .footer__input button {
+    width: 25vw;
+  }
+}
 .footer__triangle {
   border-top: 2vh solid transparent;
   border-bottom: 2vh solid transparent;
@@ -184,6 +191,18 @@ button {
   height: 8vh;
   background-color: red;
   border-radius: 50%;
+}
+@media only screen and (max-width: 750px) {
+  .footer__buttons button {
+    width: 6vh;
+    height: 6vh;
+  }
+}
+@media only screen and (min-width: 750px) and (max-width: 1600px) {
+  .footer__buttons button {
+    width: 7vh;
+    height: 7vh;
+  }
 }
 .footer__light-output {
   width: 40%;
