@@ -10,19 +10,23 @@ export const lightLogic = async (value) => {
     } else {
       if (char === "-") {
         dom.box.style.backgroundColor = "white";
-        await delay(340);
+        await delay(500);
         dom.box.style.backgroundColor = "black";
-        await delay(170);
+        await delay(80);
         console.log("-");
       } else if (char === ".") {
         dom.box.style.backgroundColor = "white";
-        await delay(260);
+        await delay(200);
         dom.box.style.backgroundColor = "black";
-        await delay(130);
+        await delay(80);
         console.log(".");
       } else if (char === " ") {
         dom.box.style.backgroundColor = "black";
-        await delay(200);
+        await delay(400);
+        console.log("break");
+      } else if (char === "/") {
+        dom.box.style.backgroundColor = "black";
+        await delay(600);
         console.log("break");
       }
     }
