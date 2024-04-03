@@ -37,7 +37,7 @@
 
 ## Struggles
 
-- Syncronising the light and speed to play in sync was a bit confusing
+- Syncronising the light and speed to play in sync was a bit challenging
 - I settled on this implementation where the audio is a Promise that waits until playing through to be resolved
 ```java
 const playPromise = (audio) =>
