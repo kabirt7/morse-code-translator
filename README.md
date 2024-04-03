@@ -37,4 +37,35 @@
 
 ## Struggles
 
-- Testing was difficult
+- Syncronising the light and speed to play in sync was a bit confusing
+```java
+export const lightAndSoundLogic = async (value) => {
+  console.log("reached light and sound logic");
+
+  for (const char of value) {
+    if (dom.sharedState.stopFlag === true) {
+      return;
+    } else {
+      if (char === "-") {
+        dom.box.style.backgroundColor = "white";
+        await delay(300);
+        dom.box.style.backgroundColor = "black";
+        await playPromise(mySoundDah);
+        await delay(50);
+      } else if (char === ".") {
+        dom.box.style.backgroundColor = "white";
+        await delay(100);
+        dom.box.style.backgroundColor = "black";
+        await playPromise(mySoundDit);
+        await delay(50);
+      } else if (char === " ") {
+        dom.box.style.backgroundColor = "black";
+        await delay(250);
+      } else if (char === "/") {
+        dom.box.style.backgroundColor = "black";
+        await delay(400);
+      }
+    }
+  }
+};
+```
