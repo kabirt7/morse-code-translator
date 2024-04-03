@@ -38,7 +38,14 @@
 ## Struggles
 
 - Syncronising the light and speed to play in sync was a bit confusing
+- I settled on this implementation where the audio is a Promise that waits until playing through to be resolved
 ```java
+const playPromise = (audio) =>
+  new Promise((resolve) => {
+    audio.addEventListener("ended", resolve);
+    audio.play();
+  });
+
 export const lightAndSoundLogic = async (value) => {
   console.log("reached light and sound logic");
 
